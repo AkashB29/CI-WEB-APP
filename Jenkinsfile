@@ -15,13 +15,13 @@ pipeline {
  
     stage('Build Docker Image') { 
    steps { 
-    bat 'docker build -t web-devops-app .' 
+    bat 'docker build -t web-app .' 
    } 
   } 
  
   stage('Run Docker Container') { 
    steps { 
-    bat 'docker run -d -p 8081:81 --name web-container web-devops-app' 
+    bat 'docker run -d -p 8081:81 --name web-container web-app' 
    } 
   } 
  
